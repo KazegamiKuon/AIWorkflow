@@ -1,5 +1,6 @@
 # BASH: conda env create
 # source activate phd
+name: test
 dependencies:
  - python=3.8
  - numpy

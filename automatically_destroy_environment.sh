@@ -1,2 +1,1 @@
-env_name=${PWD##*/}
-conda remove -n $env_name --all
+conda env remove -n test
