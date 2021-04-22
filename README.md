@@ -73,4 +73,4 @@ For uninstall environment, run **automatically_destroy_environment.sh** file. Yo
 
     ./automatically_destroy_environment.sh
 
-## (comming soon)
+## (coming soon)
