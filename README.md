@@ -61,4 +61,16 @@ When you done all your feature and wanna commit to dev, then easy do it at githu
 
 * **Step 6**: Create your feature branch and change to it. Return step 1 if you done it.
 
+## Install/Uninstall your environment
+
+I was make file bash for easy do it
+
+For install environment, run **automatically_initialize_environment.sh** file. Your environment name will same as your folder repository
+
+    ./automatically_initialize_environment.sh
+
+For uninstall environment, run **automatically_destroy_environment.sh** file. Your environment name will same as your folder repository
+
+    ./automatically_destroy_environment.sh
+
 ## (comming soon)
