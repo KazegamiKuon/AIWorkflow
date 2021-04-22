@@ -65,11 +65,17 @@ When you done all your feature and wanna commit to dev, then easy do it at githu
 
 I was make file bash for easy do it
 
-For install environment, run **automatically_initialize_environment.sh** file. Your environment name will same as your folder repository
+First, you should go to **environment.yml** and change environment name. It is at name property.
+
+Or you can find (ctrl+f) "name: test" and replace "test" by your environment name.
+
+Also you must do that at **automatically_destroy_environment.sh**, replace "test" by your environment name
+
+For install environment, run **automatically_initialize_environment.sh** file.
 
     ./automatically_initialize_environment.sh
 
-For uninstall environment, run **automatically_destroy_environment.sh** file. Your environment name will same as your folder repository
+For uninstall environment, run **automatically_destroy_environment.sh** file.
 
     ./automatically_destroy_environment.sh
 
