@@ -1,12 +1,12 @@
 # TEST
 
-Data use to test/evaluation
+Data use to test/evaluation.
 
-All description must expend how and why you create this also cite if it have
+All description must expend how and why you create this also cite if it have.
 
-Folder tree must have structure below:
+## Folder tree should have structure
 
-```
+```tree
 test                        - this folder, any test data must be here
 │   README.md               - description about this folder test
 |
@@ -20,3 +20,11 @@ test                        - this folder, any test data must be here
 │   
 └───...
 ```
+
+## Truth structure
+
+Truth folder structure would be writen here.
+
+## Description
+
+Description about your folder, your file ...
