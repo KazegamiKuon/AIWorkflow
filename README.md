@@ -61,20 +61,16 @@ When you done all your feature and wanna commit to dev, then easy do it at githu
 
 * **Step 6**: Create your feature branch and change to it. Return step 1 if you done it.
 
-## Install/Uninstall/Export your environment
+## Install/Uninstall your environment
 
 I was make file bash for easy do it
 
 For install environment, run **automatically_initialize_environment.sh** file.
 
-    bash ./automatically_initialize_environment.sh
+    ./automatically_initialize_environment.sh
 
 For uninstall environment, run **automatically_destroy_environment.sh** file.
 
-    bash ./automatically_destroy_environment.sh
-
-For export environment, run **script**
-
-    conda env export > environment.yml
+    ./automatically_destroy_environment.sh
 
 ## (coming soon)
