@@ -2,7 +2,7 @@
 
 This is template repository. Structure and automated workflow for AI project.
 
-Programming language is **python**. However for easy test, demo and debug, I usualy code in by <a ref="https://jupyter.org/install">jupyter notebook</a> on <a ref="https://docs.anaconda.com/anaconda/install/">anaconda</a>
+Programming language is **python**. However for easy test, demo and debug, I usualy code in by [jupyter notebook](https://jupyter.org/install) on [anaconda](https://docs.anaconda.com/anaconda/install/)
 
 You should install anconda before jupyter
 
@@ -14,26 +14,32 @@ If  you configed your git then pass.
 
 Check your config:
 
-    git config --list --show-origin
+```script
+git config --list --show-origin
+```
 
 If your **email** and **name** already existed then you configed or you can change your configuration too
 
-    git config --global user.name your_user_name
-    git config --global user.email your_email
+```script
+git config --global user.name your_user_name
+git config --global user.email your_email
+```
 
 ## Create new repository
 
-You create repository on github and then follow the directions on github. 
+You create repository on github and then follow the directions on github.
 
 **Remember**, you should create your folder with name same your repository name and cd to that folder before run script.
 
 ## Create workflow
 
-For easy quality control and merge, I highly recomend you should follow one workflow. I follow this <a ref="https://nvie.com/posts/a-successful-git-branching-model/">workflow</a> also add in something. Check my workflow to see more.
+For easy quality control and merge, I highly recomend you should follow one workflow. I follow this [workflow](https://nvie.com/posts/a-successful-git-branching-model/) also add in something. Check my workflow to see more.
 
 You must create **develop** *branch* before starting. Highly recomend you create it on github. Then change your branch.
 
-    git checkout develop
+```script
+git checkout develop
+```
 
 Every time when you want to create a branch, please create from develop
 branch. After you have created, change branch again.
@@ -42,10 +48,12 @@ branch. After you have created, change branch again.
 
 Well this step, you should do in your local branch or maybe it call as feature branch.
 
-    git pull
-    git add .
-    git commit -m "message/ description when commit"
-    git push
+```script
+git pull
+git add .
+git commit -m "message/ description when commit"
+git push
+```
 
 When you done all your feature and wanna commit to dev, then easy do it at github.
 
@@ -67,14 +75,20 @@ I was make file bash for easy do it
 
 For install environment, run **automatically_initialize_environment.sh** file.
 
-    bash ./automatically_initialize_environment.sh
+```script
+bash ./automatically_initialize_environment.sh
+```
 
 For uninstall environment, run **automatically_destroy_environment.sh** file.
 
-    bash ./automatically_destroy_environment.sh
+```script
+bash ./automatically_destroy_environment.sh
+```
 
 For export environment, run **script**
 
-    conda env export > environment.yml
+```script
+conda env export > environment.yml
+```
 
 ## (coming soon)
