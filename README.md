@@ -71,24 +71,14 @@ When you done all your feature and wanna commit to dev, then easy do it at githu
 
 ## Install/Uninstall/Export your environment
 
-I was make file bash for easy do it
-
-For install environment, run **automatically_initialize_environment.sh** file.
+First, you could down some support library. You can modify what library could get in **setup-library.sh**
 
 ```script
-bash ./automatically_initialize_environment.sh
+source setup-library.sh
 ```
 
-For uninstall environment, run **automatically_destroy_environment.sh** file.
+About environment, for easy control, I make file bash for easy do it at [git-actions-practice](https://github.com/KazegamiKuon/git-actions-practice). That reponsitory automatic download as default by run file bash uper.
 
-```script
-bash ./automatically_destroy_environment.sh
-```
-
-For export environment, run **script**
-
-```script
-conda env export > environment.yml
-```
+To control environment, read README at **git-actions-pratice/conda-environment**
 
 ## (coming soon)
