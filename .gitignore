@@ -2,4 +2,5 @@
 *.zip
 *.gz
 /git-actions-practice/
-**/__pycache__/
+__pycache__/
+.vscode/
