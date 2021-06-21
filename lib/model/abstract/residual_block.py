@@ -8,7 +8,7 @@ class ResidualBlock(nn.Module):
         self.out_channels = out_channels
         self.activation = activation
         self.blocks = nn.Identity()
-        self.activation = g.get_activations()[self.activation]
+        self.activate = g.get_activation(self.activation)
         self.shortcut = nn.Identity()
     
     @property
@@ -21,6 +21,5 @@ class ResidualBlock(nn.Module):
             residual = self.shortcut(x)
         x = self.blocks(x)
         x += residual
-        x = self.activation(x)
+        x = self.activate(x)
         return x
-        

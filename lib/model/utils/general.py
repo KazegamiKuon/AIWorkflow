@@ -23,17 +23,16 @@ def padding_convnn(w:int,f:int,s:int) -> int:
     """
     return ((w-1)*s-w+f)//2
 
-def get_activations()->nn.ModuleDict:
+def get_activation(activation)->nn.Module:
     """
     auto create ativation
     
     Returns
     -------
-    activations: nn.ModuleDict
-        dict activation was created.
+        activation
     """
     activations = nn.ModuleDict([
         ['lrelu',nn.LeakyReLU()],
         ['relu',nn.ReLU()]
-    ])    
-    return activations
+    ])
+    return activations[activation]

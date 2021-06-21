@@ -2,3 +2,4 @@
 *.zip
 *.gz
 /git-actions-practice/
+**/__pycache__/

@@ -1,21 +1,31 @@
 import unittest
+import torch
 from torch import nn
-from torch.nn.modules import activation
-from lib.model.utils import auto_layer as al
-from lib.model.utils import general as g
+from lib.model.resnet import ResNetBasicBlock, ResNetBottleNeckBlock, ResNetLayer
 
 class TestAutoLayer(unittest.TestCase):
     def __init__(self, methodName: str) -> None:
         super().__init__(methodName=methodName)
         pass
 
-    def test_Conv2DAuto(self):
-        conv = al.Conv2dAuto(kernel_size=5,bias=False,in_channels=32,out_channels=64)
-        print(conv)
-        del conv
+    def test_resnet_basic_block(self):
+        dummy = torch.ones((1, 32, 224, 224))
+        block = ResNetBasicBlock(32, 64)
+        print(block(dummy).shape)
+        print(block)
+        pass
     
-    def test_something(self):
-        print(nn.ReLU().__dict__)
+    def test_resnet_bottleneck(self):
+        dummy = torch.ones((1, 32, 10, 10))
+        block = ResNetBottleNeckBlock(32, 64)
+        print(block(dummy).shape)
+        print(block)
+        pass
+
+    def test_resnet_layer(self):
+        dummy = torch.ones((1, 64, 48, 48))
+        layer = ResNetLayer(64, 128, block=ResNetBasicBlock, n=3)
+        print(layer(dummy).shape)
         pass
 
 if __name__ == '__main__':
