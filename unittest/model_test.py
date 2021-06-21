@@ -1,7 +1,9 @@
 import unittest
 import torch
 from torch import nn
-from lib.model.resnet import ResNetBasicBlock, ResNetBottleNeckBlock, ResNetLayer
+import torchvision.models as models
+from lib.model.resnet import ResNetBasicBlock, ResNetBottleNeckBlock, ResNetLayer, resnet18
+from torchsummary import summary
 
 class TestAutoLayer(unittest.TestCase):
     def __init__(self, methodName: str) -> None:
@@ -26,6 +28,15 @@ class TestAutoLayer(unittest.TestCase):
         dummy = torch.ones((1, 64, 48, 48))
         layer = ResNetLayer(64, 128, block=ResNetBasicBlock, n=3)
         print(layer(dummy).shape)
+        pass
+    
+    def test_resnet18(self):
+        model = resnet18(3, 1000)
+        summary(model.cuda(), (3, 224, 224))
+        pass
+    
+    def test_resnet18_data(self):
+        summary(models.resnet18(False).cuda(), (3, 224, 224))
         pass
 
 if __name__ == '__main__':
