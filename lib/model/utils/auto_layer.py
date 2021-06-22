@@ -1,7 +1,6 @@
 from functools import partial
 from torch import nn
 from . import general as g
-from ..resnet import ResNet, ResNetBasicBlock, ResNetBottleNeckBlock
 
 class Conv2dAuto(nn.Conv2d):
     def __init__(self, *args, **kwargs) -> None:
