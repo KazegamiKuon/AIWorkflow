@@ -28,7 +28,7 @@ class ResNetEncoder(nn.Module):
                           block=block, *args, **kwargs) 
               for (in_channels, out_channels), n in zip(self.in_out_block_sizes, deepths[1:])]       
         ])
-        
+        pass
         
     def forward(self, x):
         x = self.gate(x)

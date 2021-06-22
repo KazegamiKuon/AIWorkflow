@@ -32,7 +32,7 @@ class TestAutoLayer(unittest.TestCase):
     
     def test_resnet18(self):
         model = resnet18(3, 1000)
-        summary(model, (3, 224, 224))
+        summary(model, (3, 224, 224),depth=5)
         summary(models.resnet18(False), (3, 224, 224))
         pass
     
