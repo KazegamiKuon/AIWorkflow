@@ -2,7 +2,7 @@ import unittest
 import torch
 from torch import nn
 import torchvision.models as models
-# from lib.model.resnet import ResNetBasicBlock, ResNetBottleNeckBlock, ResNetLayer, resnet18
+from lib.model.resnet import ResNetBasicBlock, ResNetBottleNeckBlock, ResNetLayer, resnet18
 from torchsummary import summary
 
 class TestAutoLayer(unittest.TestCase):
