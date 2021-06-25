@@ -1,5 +1,5 @@
 from torch import nn
-from ..utils import general as g
+from ..utils.activations import get_activation
 
 class ResidualBlock(nn.Module):
     def __init__(self,in_channels:int,out_channels:int,activation='relu'):
@@ -8,7 +8,7 @@ class ResidualBlock(nn.Module):
         self.out_channels = out_channels
         self.activation = activation
         self.blocks = nn.Identity()
-        self.activate = g.get_activation(self.activation)
+        self.activate = get_activation(self.activation)
         self.shortcut = nn.Identity()
     
     @property

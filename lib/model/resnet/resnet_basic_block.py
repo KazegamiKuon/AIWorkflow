@@ -1,7 +1,7 @@
 from torch import nn
 from .resnet_residual_block import ResNetResidualBlock
 from ..utils.auto_layer import conv_bn
-from ..utils.general import get_activation
+from ..utils.activations import get_activation
 
 class ResNetBasicBlock(ResNetResidualBlock):
     """

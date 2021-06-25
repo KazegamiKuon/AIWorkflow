@@ -1,7 +1,7 @@
 from torch import nn
 from .resnet_basic_block import ResNetBasicBlock
 from .resnet_layer import ResNetLayer
-from ..utils.general import get_activation
+from ..utils.activations import get_activation
 
 class ResNetEncoder(nn.Module):
     """
