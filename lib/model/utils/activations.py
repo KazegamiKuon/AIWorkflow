@@ -101,8 +101,10 @@ ACT2FN = {
 }
 
 
-def get_activation(activation_string):
+def get_activation(activation_string, accept_none = False):
     if activation_string in ACT2FN:
         return ACT2FN[activation_string]
+    elif accept_none:
+        return None
     else:
         raise KeyError(f"function {activation_string} not found in ACT2FN mapping {list(ACT2FN.keys())}")
